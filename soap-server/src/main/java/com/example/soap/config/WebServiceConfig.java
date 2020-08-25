@@ -25,7 +25,7 @@ public class WebServiceConfig extends WsConfigurerAdapter {
         return new ServletRegistrationBean(servlet, "/ws/*");
     }
 
-    @Bean
+    @Bean(name = "books")
     public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema bookSchema) {
         DefaultWsdl11Definition defaultWsdl11Definition = new DefaultWsdl11Definition();
         defaultWsdl11Definition.setPortTypeName("BookPort");
